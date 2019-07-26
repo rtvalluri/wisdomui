@@ -4,6 +4,7 @@ import { HomeRoutingModule } from './home/home-routing.module';
 import { StudentsRoutingModule } from './students/students-routing.module';
 import { DonorsRoutingModule } from './donors/donors-routing.module';
 import { ContactRoutingModule } from './contact/contact-routing.module';
+import { GalleryRoutingModule } from './gallery/gallery-routing.module';
 
 const routes: Routes = [{
   path: '',
@@ -22,6 +23,9 @@ const routes: Routes = [{
   path: 'contact',
   loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
 }, {
+  path: 'gallery',
+  loadChildren: () => import('./gallery/gallery.module').then(m => m.GalleryModule)
+}, {
   path: '**',
   redirectTo: '',
   pathMatch: 'full'
@@ -33,7 +37,8 @@ const routes: Routes = [{
     HomeRoutingModule,
     StudentsRoutingModule,
     DonorsRoutingModule,
-    ContactRoutingModule
+    ContactRoutingModule,
+    GalleryRoutingModule
   ],
   exports: [RouterModule]
 })
