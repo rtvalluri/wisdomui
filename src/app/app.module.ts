@@ -20,6 +20,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StudentEffects } from './students/students.effects';
 import { studentsReducer } from './reducers/students.reducer';
 import { StoreModule } from '@ngrx/store';
+import { ContactModule } from './contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { StoreModule } from '@ngrx/store';
     HomeModule,
     StudentsModule,
     DonorsModule,
+    ContactModule,
     EffectsModule.forRoot([StudentEffects]),
     StoreModule.forRoot({ students: studentsReducer })
   ],

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeRoutingModule } from './home/home-routing.module';
 import { StudentsRoutingModule } from './students/students-routing.module';
 import { DonorsRoutingModule } from './donors/donors-routing.module';
+import { ContactRoutingModule } from './contact/contact-routing.module';
 
 const routes: Routes = [{
   path: '',
@@ -18,6 +19,9 @@ const routes: Routes = [{
   path: 'donors',
   loadChildren: () => import('./donors/donors.module').then(m => m.DonorsModule)
 }, {
+  path: 'contact',
+  loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+}, {
   path: '**',
   redirectTo: '',
   pathMatch: 'full'
@@ -28,7 +32,8 @@ const routes: Routes = [{
     RouterModule.forRoot(routes),
     HomeRoutingModule,
     StudentsRoutingModule,
-    DonorsRoutingModule
+    DonorsRoutingModule,
+    ContactRoutingModule
   ],
   exports: [RouterModule]
 })
