@@ -5,12 +5,20 @@
     <span>Wisdom Educational Trust</span>
 
     <span class="example-spacer"></span>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+    <button mat-icon-button aria-label="Menu button">
+        <mat-icon>favorite</mat-icon>
+    </button>
 </mat-toolbar>
 <mat-sidenav-container class="example-container">
 
     <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-        Sidenav content
+        <mat-nav-list>
+            <a mat-list-item href="#"> Home </a>
+            <a mat-list-item href="#"> Students </a>
+            <a mat-list-item href="#"> Donors </a>
+            <a mat-list-item href="#"> Contact </a>
+            <a mat-list-item href="#"> Gallery </a>
+        </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>

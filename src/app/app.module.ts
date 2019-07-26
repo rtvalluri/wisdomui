@@ -7,6 +7,7 @@ import {
   MatToolbarModule,
   MatIconModule
 } from '@angular/material';
+import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatListModule,
     HomeModule
   ],
   exports: [
