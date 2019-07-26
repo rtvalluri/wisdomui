@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { FormsModule } from '@angular/forms';
+import { StudentsModule } from './students/students.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    HomeModule
+    HomeModule,
+    StudentsModule
   ],
   exports: [
   ],
