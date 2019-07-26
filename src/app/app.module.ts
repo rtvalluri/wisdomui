@@ -16,6 +16,10 @@ import { HomeModule } from './home/home.module';
 import { FormsModule } from '@angular/forms';
 import { StudentsModule } from './students/students.module';
 import { DonorsModule } from './donors/donors.module';
+import { EffectsModule } from '@ngrx/effects';
+import { StudentEffects } from './students/students.effects';
+import { studentsReducer } from './reducers/students.reducer';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,9 @@ import { DonorsModule } from './donors/donors.module';
     MatListModule,
     HomeModule,
     StudentsModule,
-    DonorsModule
+    DonorsModule,
+    EffectsModule.forRoot([StudentEffects]),
+    StoreModule.forRoot({ students: studentsReducer })
   ],
   exports: [
   ],
