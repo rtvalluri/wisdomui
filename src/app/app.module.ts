@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { FormsModule } from '@angular/forms';
 import { StudentsModule } from './students/students.module';
+import { DonorsModule } from './donors/donors.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { StudentsModule } from './students/students.module';
     MatIconModule,
     MatListModule,
     HomeModule,
-    StudentsModule
+    StudentsModule,
+    DonorsModule
   ],
   exports: [
   ],
