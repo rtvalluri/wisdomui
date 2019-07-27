@@ -18,7 +18,7 @@ import { StudentsModule } from './students/students.module';
 import { DonorsModule } from './donors/donors.module';
 import { EffectsModule } from '@ngrx/effects';
 import { StudentEffects } from './students/students.effects';
-import { studentsReducer } from './reducers/students.reducer';
+// import { studentsReducer } from './reducers/students.reducer';
 import { StoreModule } from '@ngrx/store';
 import { ContactModule } from './contact/contact.module';
 import { GalleryModule } from './gallery/gallery.module';
@@ -43,8 +43,8 @@ import { GalleryModule } from './gallery/gallery.module';
     DonorsModule,
     ContactModule,
     GalleryModule,
-    EffectsModule.forRoot([StudentEffects]),
-    StoreModule.forRoot({ students: studentsReducer })
+    // EffectsModule.forRoot([StudentEffects]),
+    // StoreModule.forRoot({ students: studentsReducer })
   ],
   exports: [
   ],
