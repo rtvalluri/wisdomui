@@ -1,7 +1,7 @@
 <!-- <p *ngFor="let student of students$ | async">{{student.name}}</p> -->
 
 <div class="wrapper">
-    <h2>Students List</h2>
+    <h3>Students List <span *ngIf="isLoading">...Please wait while data loads</span></h3>
     <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
         <ng-container matColumnDef="position">

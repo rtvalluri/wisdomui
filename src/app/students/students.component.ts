@@ -18,20 +18,21 @@ export class StudentsComponent implements OnInit {
   public studentsList: any;
   public displayedColumns: string[] = ['position', 'name', 'mentor', 'currentStatus'];
   public dataSource;
+  public isLoading = false;
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   constructor(
     public http: HttpClient,
-    public store: Store<typeof AppStore>,
+    // public store: Store<typeof AppStore>,
     private studentsService: StudentsService
   ) { }
 
   ngOnInit() {
-    this.students$ = this.store.select(state => state.students);
+    // this.students$ = this.store.select(state => state.students);
     // this.store.dispatch({ type: '<Students> fetch in progress' });
-
+    this.isLoading = true;
     this.studentsService.getStudentsList().subscribe(data => {
       if (Array.isArray(data)) {
         data.forEach((obj, index) => {
@@ -41,6 +42,7 @@ export class StudentsComponent implements OnInit {
       this.dataSource = new MatTableDataSource(data as any);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
+      this.isLoading = false;
     })
   }
 
