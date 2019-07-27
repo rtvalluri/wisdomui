@@ -90,9 +90,6 @@ MIT
 @angular/router
 MIT
 
-@ngrx/store
-MIT
-
 hammerjs
 MIT
 The MIT License (MIT)
