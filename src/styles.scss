@@ -27,4 +27,15 @@ table.mat-table {
     max-width: 300px;
 }
 }
+
+  
+.flexible {
+    display: flex !important; 
+    justify-content: center; 
+    align-items: center,
+  }
+
+  .m0 {
+    margin: 0px !important;
+  }
     

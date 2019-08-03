@@ -1,7 +1,7 @@
 <!-- <p *ngFor="let student of students$ | async">{{student.name}}</p> -->
 
 <div class="wrapper">
-    <h3>Students List <span *ngIf="isLoading">...Please wait while data loads</span></h3>
+    <h3>Students List</h3>
     <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
         <ng-container matColumnDef="position">
@@ -27,5 +27,9 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+    <mat-card *ngIf="isLoading" class="flexible m0">
+        <mat-progress-spinner color="primary" mode="indeterminate" [diameter]="40">
+        </mat-progress-spinner>
+    </mat-card>
     <mat-paginator [pageSizeOptions]="[10, 15, 20, 25, 30]" showFirstLastButtons></mat-paginator>
 </div>
