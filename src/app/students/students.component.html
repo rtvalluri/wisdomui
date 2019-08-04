@@ -2,6 +2,9 @@
     <!-- begin: students toolbar -->
     <mat-card class="ml0 mr0">
         Students List
+        <button mat-icon-button (click)="loadStudents()" aria-label="Menu button">
+            <mat-icon>cached</mat-icon>
+        </button>
         <span class="spacer"></span>
         <!-- <mat-form-field>
             <mat-label>{{selectedBatch}}</mat-label>
@@ -46,4 +49,7 @@
     </mat-card>
     <mat-paginator [pageSizeOptions]="[10, 15, 20, 25, 30]" showFirstLastButtons></mat-paginator>
     <!-- end: students table -->
+    <mat-card class="ml0 mr0" *ngIf="noDataReceived">
+        No Data Received
+    </mat-card>
 </div>

@@ -8,7 +8,9 @@ import { MatTableModule } from '@angular/material/table';
 import {
   MatPaginatorModule,
   MatCardModule,
-  MatSelectModule
+  MatSelectModule,
+  MatIconModule,
+  MatButtonModule
 } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
@@ -22,7 +24,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class StudentsModule { }

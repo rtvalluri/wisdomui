@@ -15,6 +15,7 @@ export class StudentsComponent implements OnInit {
   public displayedColumns: string[] = ['position', 'name', 'mentor', 'currentStatus'];
   public dataSource;
   public isLoading = false;
+  public noDataReceived = false;
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -24,16 +25,24 @@ export class StudentsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.loadStudents();
+  }
+
+  public loadStudents() {
+    this.dataSource = undefined;
     this.isLoading = true;
     this.studentsService.getStudentsList().subscribe(data => {
       if (Array.isArray(data)) {
+        this.noDataReceived = false;
         data.forEach((obj, index) => {
           obj['position'] = index + 1;
         })
+        this.dataSource = new MatTableDataSource(data as any);
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
+      } else {
+        this.noDataReceived = true;
       }
-      this.dataSource = new MatTableDataSource(data as any);
-      this.dataSource.sort = this.sort;
-      this.dataSource.paginator = this.paginator;
       this.isLoading = false;
     })
   }
