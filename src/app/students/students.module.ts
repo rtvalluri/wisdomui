@@ -5,7 +5,11 @@ import { StudentsRoutingModule } from './students-routing.module';
 import { StudentsComponent } from './students.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule, MatCardModule } from '@angular/material';
+import {
+  MatPaginatorModule,
+  MatCardModule,
+  MatSelectModule
+} from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
@@ -17,7 +21,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatTableModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule
   ]
 })
 export class StudentsModule { }

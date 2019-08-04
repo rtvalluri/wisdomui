@@ -1,7 +1,20 @@
-<!-- <p *ngFor="let student of students$ | async">{{student.name}}</p> -->
-
 <div class="wrapper">
-    <h3>Students List</h3>
+    <!-- begin: students toolbar -->
+    <mat-card class="ml0 mr0">
+        Students List
+        <span class="spacer"></span>
+        <!-- <mat-form-field>
+            <mat-label>{{selectedBatch}}</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let batch of batches" [value]="batch">
+                    {{batch}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field> -->
+    </mat-card>
+    <!-- end: students toolbar -->
+
+    <!-- begin: students table -->
     <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
         <ng-container matColumnDef="position">
@@ -32,4 +45,5 @@
         </mat-progress-spinner>
     </mat-card>
     <mat-paginator [pageSizeOptions]="[10, 15, 20, 25, 30]" showFirstLastButtons></mat-paginator>
+    <!-- end: students table -->
 </div>
