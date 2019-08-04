@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Wisdom Educational Trust</title>
+  <base href="https://rtvalluri.github.io/wisdomui/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-signin-client_id"
+    content="458439701640-cp3p4ghjij63i6vrb06pllufehahhuoq.apps.googleusercontent.com">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<link rel="stylesheet" href="styles.da567bbb1df336ac012a.css"></head>
+
+<body>
+  <app-root></app-root>
+  <script>
+    function onSignIn(googleUser) {
+      var id_token = googleUser.getAuthResponse().id_token;
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('User Id: ' + id_token);
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+  </script>
+<script src="runtime-es2015.fb6e8805a3b260c13f32.js" type="module"></script><script src="polyfills-es2015.27661dfa98f6332c27dc.js" type="module"></script><script src="runtime-es5.5a86c47e39a6d35a583d.js" nomodule></script><script src="polyfills-es5.7f43b971448d2fb49202.js" nomodule></script><script src="main-es2015.3e26b7e0faf36088b01a.js" type="module"></script><script src="main-es5.6b0ee027eb8532c73765.js" nomodule></script></body>
+
+</html>
