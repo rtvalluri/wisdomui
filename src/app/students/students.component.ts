@@ -65,7 +65,9 @@ export class StudentsComponent implements OnInit {
   }
 
   public resetTableData() {
-    this.dataSource = undefined;
+    if (this.dataSource) {
+      this.dataSource = undefined;
+    }
   }
 
   public showLoader() {
