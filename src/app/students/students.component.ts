@@ -10,7 +10,7 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./students.component.scss']
 })
 export class StudentsComponent implements OnInit {
-  public students$: Observable<any>;
+  public COMPONENT_NAME = 'Students Component';
   public studentsList: any;
   public displayedColumns: string[] = ['position', 'name', 'mentor', 'currentStatus'];
   public dataSource;
@@ -29,22 +29,59 @@ export class StudentsComponent implements OnInit {
   }
 
   public loadStudents() {
-    this.dataSource = undefined;
-    this.isLoading = true;
-    this.studentsService.getStudentsList().subscribe(data => {
-      if (Array.isArray(data)) {
-        this.noDataReceived = false;
-        data.forEach((obj, index) => {
-          obj['position'] = index + 1;
-        })
-        this.dataSource = new MatTableDataSource(data as any);
-        this.dataSource.sort = this.sort;
-        this.dataSource.paginator = this.paginator;
-      } else {
-        this.noDataReceived = true;
-      }
-      this.isLoading = false;
+    this.resetTableData();
+    this.showLoader();
+    this.studentsService.getStudentsList().subscribe(response => {
+      this.handleStudentsResponse(response);
+    }, error => {
+      console.log('error occured');
+      console.log(error);
     })
+  }
+
+  public handleStudentsResponse(data) {
+    if (Array.isArray(data)) {
+      if (this.noDataReceived) {
+        this.hideNoDataReceivedMessage();
+      }
+      this.addPositionColumn(data);
+      this.initMatTable(data);
+    } else {
+      this.showNoDataReceivedMessage();
+    }
+    this.hideLoader();
+  }
+
+  public addPositionColumn(data) {
+    data.forEach((obj, index) => {
+      obj['position'] = index + 1;
+    })
+  }
+
+  public initMatTable(data) {
+    this.dataSource = new MatTableDataSource(data as any);
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
+  }
+
+  public resetTableData() {
+    this.dataSource = undefined;
+  }
+
+  public showLoader() {
+    this.isLoading = true;
+  }
+
+  public hideLoader() {
+    this.isLoading = false;
+  }
+
+  public showNoDataReceivedMessage() {
+    this.noDataReceived = true;
+  }
+
+  public hideNoDataReceivedMessage() {
+    this.noDataReceived = false;
   }
 
 }
