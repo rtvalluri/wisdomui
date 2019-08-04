@@ -43,8 +43,6 @@ import { GalleryModule } from './gallery/gallery.module';
     DonorsModule,
     ContactModule,
     GalleryModule,
-    // EffectsModule.forRoot([StudentEffects]),
-    // StoreModule.forRoot({ students: studentsReducer })
   ],
   exports: [
   ],
