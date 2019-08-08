@@ -6,6 +6,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { MatCardModule, MatDividerModule, MatListModule } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { SharedModule } from '../shared/shared.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -16,7 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     MatGridListModule,
     MatDividerModule,
     MatListModule,
-
+    FontAwesomeModule,
     SharedModule
   ]
 })

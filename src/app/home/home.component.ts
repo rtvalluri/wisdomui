@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { faDonate, faHandHoldingHeart, faHandsHelping, faSign } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit {
   public quoteIndex = 0;
@@ -12,10 +14,18 @@ export class HomeComponent implements OnInit {
     { content: 'Education is not preparation for life. Education is life itself. - John Dewey' },
     { content: 'No one has ever become poor by giving. - Anne Frank' },
   ]
+  public donateIcon;
+  public nonProfitIcon;
+  public helpIcon;
+  public uniqueIcon;
+
   constructor() { }
 
   ngOnInit() {
-
+    this.donateIcon = faDonate;
+    this.nonProfitIcon = faHandHoldingHeart;
+    this.helpIcon = faHandsHelping;
+    this.uniqueIcon = faSign;
   }
 
 }

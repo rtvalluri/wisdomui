@@ -1,5 +1,9 @@
 <div class="wrapper">
+    <!-- begin: carousel -->
     <app-carousel [slides]="slides"></app-carousel>
+    <!-- end: carousel -->
+
+    <!-- begin: Intro -->
     <mat-card>
         <mat-card-content>
             <p class="fs17">
@@ -16,55 +20,73 @@
             </p>
         </mat-card-content>
     </mat-card>
+    <!-- end: Intro -->
 
-    <mat-card class="example-card mini">
-        <mat-card-header>
-            <mat-card-title>Non-Profitable Trust</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            <p>
-                This is a non-profitable trust formed by 6 guys with great vision and working towards
-                promoting the
-                education in rural villages. We will provide the scholarships and mentoring to the deserved
-                candidates
-                who are brilliant in studies but economically challenged.
-            </p>
-        </mat-card-content>
+    <!-- begin: features -->
+    <div class="flexible">
+        <mat-card class="card mini">
+            <mat-card-header>
+                <div mat-card-avatar>
+                    <fa-icon [icon]="nonProfitIcon" size="lg"></fa-icon>
+                </div>
+                <mat-card-title>Non-Profitable Trust</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    This is a non-profitable trust formed by 6 guys with great vision and working towards
+                    promoting the
+                    education in rural villages. We will provide the scholarships and mentoring to the deserved
+                    candidates
+                    who are brilliant in studies but economically challenged.
+                </p>
+            </mat-card-content>
 
-    </mat-card>
-    <mat-card class="example-card mini">
-        <mat-card-header>
-            <mat-card-title>Unique Feature</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            <p>
-                A special feature in our program is that we provide continuous mentoring to the selected
-                students for
-                their entire academic career and make sure that they will settle in their lives smoothly. This is in
-                addition to the continuous monetary support, based on the student's progress.
-            </p>
-        </mat-card-content>
+        </mat-card>
+        <mat-card class="card mini">
+            <mat-card-header>
+                <div mat-card-avatar>
+                    <fa-icon [icon]="uniqueIcon" size="lg"></fa-icon>
+                </div>
+                <mat-card-title>Unique Feature</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    A special feature in our program is that we provide continuous mentoring to the selected
+                    students for
+                    their entire academic career and make sure that they will settle in their lives smoothly. This is in
+                    addition to the continuous monetary support, based on the student's progress.
+                </p>
+            </mat-card-content>
 
-    </mat-card>
-    <mat-card class="example-card mini">
-        <mat-card-header>
-            <mat-card-title>Donations</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            <p>
-                We gather funds in every year from donors and distribute the scholarships to the merit students selected
-                for that year.
-            </p>
-        </mat-card-content>
-    </mat-card>
-    <mat-card class="example-card mini">
-        <mat-card-header>
-            <mat-card-title>Students</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            <p>
-                With all the collective efforts, we extended our help to 329 students continously so far.
-            </p>
-        </mat-card-content>
-    </mat-card>
+        </mat-card>
+        <mat-card class="card mini">
+            <mat-card-header>
+                <div mat-card-avatar>
+                    <fa-icon [icon]="donateIcon" size="lg"></fa-icon>
+                </div>
+                <mat-card-title>Donations</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    We gather funds in every year from donors and distribute the scholarships to the merit students
+                    selected
+                    for that year.
+                </p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="card mini">
+            <mat-card-header>
+                <div mat-card-avatar>
+                    <fa-icon [icon]="helpIcon" size="lg"></fa-icon>
+                </div>
+                <mat-card-title>Students</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    With all the collective efforts, we extended our help to 329 students continously so far.
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <!-- begin: features -->
 </div>

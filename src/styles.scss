@@ -58,3 +58,11 @@ table.mat-table {
   .fs18 {
     font-size: 18px;
   }
+
+  .clickable{
+    cursor: pointer;
+  } 
+  
+  .focus-none:focus{
+    outline: none;
+  }

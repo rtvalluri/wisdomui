@@ -26,7 +26,6 @@ export class CarouselComponent implements OnInit, OnDestroy {
         this.showCarousel = true;
         this.setIntervalId = setInterval(() => {
             this.slideIndex = this.slideIndex === this.slidesLength ? 0 : ++this.slideIndex;
-            console.log(this.slideIndex)
         }, 3000)
     }
 
