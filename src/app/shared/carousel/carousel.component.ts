@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, OnDestroy, ViewEncapsulation } from "@angular/core";
-import { carouselSlide } from 'src/app/util/util.types';
+import { carouselSlide } from './carousel.types';
 
 @Component({
     selector: 'app-carousel',

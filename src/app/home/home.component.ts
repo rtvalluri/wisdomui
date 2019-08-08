@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { faDonate, faHandHoldingHeart, faHandsHelping, faSign } from '@fortawesome/free-solid-svg-icons';
+import { carouselSlide } from '../shared/carousel/carousel.types';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { faDonate, faHandHoldingHeart, faHandsHelping, faSign } from '@fortaweso
 })
 export class HomeComponent implements OnInit {
   public quoteIndex = 0;
-  public slides = [
+  public slides: carouselSlide[] = [
     { content: 'No merit student should stop his/her education because of poor financial background.' },
     { content: 'Education is not preparation for life. Education is life itself. - John Dewey' },
     { content: 'No one has ever become poor by giving. - Anne Frank' },
