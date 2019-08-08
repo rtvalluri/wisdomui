@@ -5,6 +5,7 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { MatCardModule, MatDividerModule, MatListModule } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -14,7 +15,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatCardModule,
     MatGridListModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+
+    SharedModule
   ]
 })
 export class HomeModule { }
