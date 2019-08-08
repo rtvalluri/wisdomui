@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
-import { CarouselComponent } from './carousel/carousel.component';
 import { MatTabsModule, MatCardModule } from '@angular/material';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
     imports: [

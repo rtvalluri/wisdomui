@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { faDonate, faHandHoldingHeart, faHandsHelping, faSign } from '@fortawesome/free-solid-svg-icons';
-import { carouselSlide } from '../shared/carousel/carousel.types';
+import { carouselSlide } from '../common/components/carousel/carousel.types';
 
 @Component({
   selector: 'app-home',

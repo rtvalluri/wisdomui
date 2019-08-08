@@ -43,7 +43,7 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-    <mat-card *ngIf="isLoading" class="flexible m0">
+    <mat-card *ngIf="isLoading" class="flexible m0 flex-h-align-center">
         <mat-progress-spinner color="primary" mode="indeterminate" [diameter]="40">
         </mat-progress-spinner>
     </mat-card>

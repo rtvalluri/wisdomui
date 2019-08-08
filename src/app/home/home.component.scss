@@ -1,11 +1,17 @@
 .card {
-    max-width: 400px;
-  }
+  max-width: 400px;
+}
 
-  .card.mini {
-    min-height: 150px;
+.card.mini {
+  min-height: 150px;
 
-    .mat-card-header-text {
-      margin: 0px;
-    }
+  .mat-card-header-text {
+    margin: 0px;
   }
+}
+
+@media only screen and (max-width: 768px) {
+  .sm-flex-dir-col {
+    flex-direction: column;
+  }
+}

@@ -1,68 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 body {
-    margin: 0px;
+  margin: 0px;
 }
 
 table.mat-table {
-    width: 100%;
+  width: 100%;
 }
 
 .wrapper {
-    margin: 10px;    
+  margin: 10px;
 }
 
 .mat-list-item-content {
-    min-width: 120px;    
+  min-width: 120px;
 }
 
 .caption {
-    font-size: 14px;    
+  font-size: 14px;
 }
 
-.mat-card{
-    margin: 10px;
-.mini {
+.mat-card {
+  margin: 10px;
+  .mini {
     max-width: 300px;
-}
+  }
 }
 
-  
 .flexible {
-    display: flex !important; 
-    justify-content: center; 
-    align-items: center,
-  }
+  display: flex !important;
+}
 
-  .m0 {
-    margin: 0px !important;
-  }
+.flex-h-align-center {
+  justify-content: center;
+}
 
-  .ml0 {
-    margin-left: 0px !important;
-  }
+.flex-v-align-center {
+  align-items: center;
+}
 
-  .mr0 {
-    margin-right: 0px !important;
-  }
-    
-  .spacer {
-    flex: 1 1 auto;
-  }
+.m0 {
+  margin: 0px !important;
+}
 
-  .fs17 {
-    font-size: 17px;
-  }
+.ml0 {
+  margin-left: 0px !important;
+}
 
-  .fs18 {
-    font-size: 18px;
-  }
+.mr0 {
+  margin-right: 0px !important;
+}
 
-  .clickable{
-    cursor: pointer;
-  } 
-  
-  .focus-none:focus{
-    outline: none;
-  }
+.spacer {
+  flex: 1 1 auto;
+}
+
+.fs17 {
+  font-size: 17px;
+}
+
+.fs18 {
+  font-size: 18px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.focus-none:focus {
+  outline: none;
+}
