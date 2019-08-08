@@ -8,14 +8,4 @@ export class HelperService {
 
     }
 
-    public debounce = (func, delay) => {
-        let tid;
-        return () => {
-            clearTimeout(tid);
-            tid = setTimeout(() => {
-                func.apply(this)
-            }, delay)
-        }
-    }
-
 }

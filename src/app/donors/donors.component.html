@@ -6,7 +6,8 @@
     <!-- begin: students toolbar -->
     <mat-card class="ml0 mr0">
         Donors List
-        <button mat-icon-button (click)="loadDonors()" aria-label="Menu button">
+        <button mat-icon-button aria-label="Menu button" debouncer (debouncedEventHandler)="loadDonors()"
+            [debounceTime]="1000">
             <mat-icon>cached</mat-icon>
         </button>
         <span class="spacer"></span>
@@ -43,7 +44,7 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-    <mat-card *ngIf="isLoading" class="flexible m0">
+    <mat-card *ngIf="isLoading" class="flexible m0 flex-h-align-center">
         <mat-progress-spinner color="primary" mode="indeterminate" [diameter]="40">
         </mat-progress-spinner>
     </mat-card>

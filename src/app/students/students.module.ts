@@ -12,6 +12,7 @@ import {
   MatTableModule,
   MatProgressSpinnerModule
 } from '@angular/material';
+import { SharedModule } from '../common/shared.module';
 
 @NgModule({
   declarations: [StudentsComponent],
@@ -25,7 +26,8 @@ import {
     MatCardModule,
     MatSelectModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    SharedModule
   ]
 })
 export class StudentsModule { }

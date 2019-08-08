@@ -2,7 +2,8 @@
     <!-- begin: students toolbar -->
     <mat-card class="ml0 mr0">
         <span class="fs18">Students List</span>
-        <button mat-icon-button (click)="loadStudents()" aria-label="Menu button">
+        <button mat-icon-button aria-label="Menu button" debouncer (debouncedEventHandler)="loadStudents()"
+            [debounceTime]="1000">
             <mat-icon>cached</mat-icon>
         </button>
         <span class="spacer"></span>

@@ -12,6 +12,7 @@ import {
   MatTableModule,
   MatProgressSpinnerModule
 } from '@angular/material';
+import { SharedModule } from '../common/shared.module';
 
 @NgModule({
   declarations: [DonorsComponent],
@@ -24,7 +25,8 @@ import {
     MatIconModule,
     MatButtonModule,
     MatTableModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    SharedModule
   ]
 })
 export class DonorsModule { }
