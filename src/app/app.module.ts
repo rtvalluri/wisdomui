@@ -22,6 +22,7 @@ import { StudentEffects } from './students/students.effects';
 import { StoreModule } from '@ngrx/store';
 import { ContactModule } from './contact/contact.module';
 import { GalleryModule } from './gallery/gallery.module';
+import { SideNavBarModule } from './sidenavbar/sidenavbar.module';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { GalleryModule } from './gallery/gallery.module';
     DonorsModule,
     ContactModule,
     GalleryModule,
+    SideNavBarModule
   ],
   exports: [
   ],

@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { SideNavBarComponent } from './sidenavbar/sidenavbar.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'wisdomwebapp';
+  public title = 'wisdomwebapp';
+
 }
