@@ -10,7 +10,8 @@ import {
   MatIconModule,
   MatButtonModule,
   MatTableModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatSortModule
 } from '@angular/material';
 import { SharedModule } from '../common/shared.module';
 
@@ -22,6 +23,7 @@ import { SharedModule } from '../common/shared.module';
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSortModule,
     MatProgressSpinnerModule,
     MatCardModule,
     MatSelectModule,

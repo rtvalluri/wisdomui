@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DonorsService } from './donors.service';
-import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 
 @Component({
   selector: 'app-donors',
@@ -14,6 +14,7 @@ export class DonorsComponent implements OnInit {
   public isLoading = false;
   public noDataReceived = false;
 
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   constructor(
@@ -56,7 +57,7 @@ export class DonorsComponent implements OnInit {
 
   public initMatTable(data) {
     this.dataSource = new MatTableDataSource(data as any);
-    // this.dataSource.sort = this.sort;
+    this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
 
