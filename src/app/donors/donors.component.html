@@ -4,13 +4,16 @@
 
 <div class="wrapper">
     <!-- begin: students toolbar -->
-    <mat-card class="ml0 mr0">
+    <mat-card class="ml0 mr0 flexible flex-v-align-center">
         Donors List
         <button mat-icon-button aria-label="Menu button" debouncer (debouncedEventHandler)="loadDonors()"
-            [debounceTime]="1000">
+            [debounceTime]="1000" [disabled]="isLoading">
             <mat-icon>cached</mat-icon>
         </button>
-        <span class="spacer"></span>
+        <div class="spacer"></div>
+        <mat-form-field class="d-ib hide-on-xs" *ngIf="dataSource">
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search table contents here">
+        </mat-form-field>
         <!-- <mat-form-field>
                 <mat-label>{{selectedBatch}}</mat-label>
                 <mat-select>
@@ -22,8 +25,12 @@
     </mat-card>
     <!-- end: students toolbar -->
 
+    <mat-form-field class="show-on-xs" *ngIf="dataSource">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search table contents here">
+    </mat-form-field>
+
     <!-- begin: students table -->
-    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <table mat-table *ngIf="dataSource" [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
         <ng-container matColumnDef="position">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
@@ -48,7 +55,7 @@
         <mat-progress-spinner color="primary" mode="indeterminate" [diameter]="40">
         </mat-progress-spinner>
     </mat-card>
-    <mat-paginator [pageSizeOptions]="[10, 15, 20, 25, 30]" showFirstLastButtons></mat-paginator>
+    <mat-paginator *ngIf="dataSource" [pageSizeOptions]="[10, 15, 20, 25, 30]" showFirstLastButtons></mat-paginator>
     <!-- end: students table -->
     <mat-card class="ml0 mr0" *ngIf="noDataReceived">
         No Data Received

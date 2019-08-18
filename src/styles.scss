@@ -13,10 +13,6 @@ table.mat-table {
   margin: 10px;
 }
 
-.mat-list-item-content {
-  min-width: 120px;
-}
-
 .caption {
   font-size: 14px;
 }
@@ -53,7 +49,7 @@ table.mat-table {
 }
 
 .spacer {
-  flex: 1 1 auto;
+  flex-grow: 1;
 }
 
 .fs17 {
@@ -70,4 +66,40 @@ table.mat-table {
 
 .focus-none:focus {
   outline: none;
+}
+
+.d-ib {
+  display: inline-block;
+}
+
+.d-b {
+  display: block;
+}
+
+.show-on-sm,
+.show-on-xs {
+  display: none !important;
+}
+
+.hide-on-sm,
+.hide-on-xs {
+  display: block;
+}
+
+@media screen and (max-width: 770px) {
+  .show-on-sm {
+    display: block;
+  }
+  .hide-on-sm {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .show-on-xs {
+    display: block !important;
+  }
+  .hide-on-xs {
+    display: none !important;
+  }
 }

@@ -36,6 +36,8 @@ export class StudentsComponent implements OnInit {
     }, error => {
       console.log('error occured');
       console.log(error);
+      this.hideLoader();
+      this.showNoDataReceivedMessage();
     })
   }
 
@@ -84,6 +86,10 @@ export class StudentsComponent implements OnInit {
 
   public hideNoDataReceivedMessage() {
     this.noDataReceived = false;
+  }
+
+  public applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
 }

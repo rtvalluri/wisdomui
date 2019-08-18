@@ -83,4 +83,8 @@ export class DonorsComponent implements OnInit {
     this.noDataReceived = false;
   }
 
+  public applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
 }

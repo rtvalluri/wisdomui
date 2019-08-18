@@ -11,7 +11,9 @@ import {
   MatButtonModule,
   MatTableModule,
   MatProgressSpinnerModule,
-  MatSortModule
+  MatSortModule,
+  MatFormFieldModule,
+  MatInputModule
 } from '@angular/material';
 import { SharedModule } from '../common/shared.module';
 
@@ -29,6 +31,8 @@ import { SharedModule } from '../common/shared.module';
     MatSelectModule,
     MatIconModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
     SharedModule
   ]
 })
